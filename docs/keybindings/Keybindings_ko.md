@@ -2,406 +2,122 @@ _This file is auto-generated. To update, make the changes in the pkg/i18n direct
 
 # Lazygit 키 바인딩
 
-_Legend: `<c-b>` means ctrl+b, `<a-b>` means alt+b, `B` means shift+b_
+_표기법: `<c-b>`는 ctrl+b, `<a-b>`는 alt+b, `B`는 shift+b를 의미합니다._
 
 ## 글로벌 키 바인딩
 
 | Key | Action | Info |
 |-----|--------|-------------|
-| `` <c-r> `` | 최근에 사용한 저장소로 전환 |  |
-| `` <pgup> (fn+up/shift+k) `` | 메인 패널을 위로 스크롤 |  |
-| `` <pgdown> (fn+down/shift+j) `` | 메인 패널을 아래로로 스크롤 |  |
-| `` @ `` | 명령어 로그 메뉴 열기 | View options for the command log e.g. show/hide the command log and focus the command log. |
-| `` P `` | 푸시 | Push the current branch to its upstream branch. If no upstream is configured, you will be prompted to configure an upstream branch. |
-| `` p `` | 업데이트 | Pull changes from the remote for the current branch. If no upstream is configured, you will be prompted to configure an upstream branch. |
-| `` ) `` | Increase rename similarity threshold | Increase the similarity threshold for a deletion and addition pair to be treated as a rename.<br><br>The default can be changed in the config file with the key 'git.renameSimilarityThreshold'. |
-| `` ( `` | Decrease rename similarity threshold | Decrease the similarity threshold for a deletion and addition pair to be treated as a rename.<br><br>The default can be changed in the config file with the key 'git.renameSimilarityThreshold'. |
-| `` } `` | Diff 보기의 변경 사항 주위에 표시되는 컨텍스트의 크기를 늘리기 | Increase the amount of the context shown around changes in the diff view.<br><br>The default can be changed in the config file with the key 'git.diffContextSize'. |
-| `` { `` | Diff 보기의 변경 사항 주위에 표시되는 컨텍스트 크기 줄이기 | Decrease the amount of the context shown around changes in the diff view.<br><br>The default can be changed in the config file with the key 'git.diffContextSize'. |
-| `` : `` | Execute shell command | Bring up a prompt where you can enter a shell command to execute. |
-| `` <c-p> `` | 커스텀 Patch 옵션 보기 |  |
-| `` m `` | View merge/rebase options | View options to abort/continue/skip the current merge/rebase. |
-| `` R `` | 새로고침 | Refresh the git state (i.e. run `git status`, `git branch`, etc in background to update the contents of panels). This does not run `git fetch`. |
-| `` + `` | 다음 스크린 모드 (normal/half/fullscreen) |  |
-| `` _ `` | 이전 스크린 모드 |  |
+| `` <c-r> `` | 최근 저장소로 전환 |  |
+| `` <pgup> (fn+up/shift+k) `` | 메인 창 위로 스크롤 |  |
+| `` <pgdown> (fn+down/shift+j) `` | 메인 창 아래로 스크롤 |  |
+| `` @ `` | 명령어 로그 옵션 보기 | 명령어 로그에 대한 옵션(예: 명령어 로그 표시/숨기기 및 명령어 로그 포커스)을 봅니다. |
+| `` P `` | 푸시 | 현재 브랜치를 업스트림 브랜치로 푸시합니다. 업스트림이 구성되지 않은 경우 업스트림 브랜치를 구성하라는 메시지가 표시됩니다. |
+| `` p `` | 풀 | 현재 브랜치에 대한 원격의 변경 사항을 풀합니다. 업스트림이 구성되지 않은 경우 업스트림 브랜치를 구성하라는 메시지가 표시됩니다. |
+| `` ) `` | 이름 변경 유사도 임계값 늘리기 | 삭제 및 추가 쌍이 이름 변경으로 처리되기 위한 유사도 임계값을 높입니다.<br><br>기본값은 구성 파일에서 'git.renameSimilarityThreshold' 키로 변경할 수 있습니다. |
+| `` ( `` | 이름 변경 유사도 임계값 줄이기 | 삭제 및 추가 쌍이 이름 변경으로 처리되기 위한 유사도 임계값을 줄입니다.<br><br>기본값은 구성 파일에서 'git.renameSimilarityThreshold' 키로 변경할 수 있습니다. |
+| `` } `` | diff 컨텍스트 크기 늘리기 | diff 뷰에서 변경 사항 주위에 표시되는 컨텍스트의 양을 늘립니다.<br><br>기본값은 구성 파일에서 'git.diffContextSize' 키로 변경할 수 있습니다. |
+| `` { `` | diff 컨텍스트 크기 줄이기 | diff 뷰에서 변경 사항 주위에 표시되는 컨텍스트의 양을 줄립니다.<br><br>기본값은 구성 파일에서 'git.diffContextSize' 키로 변경할 수 있습니다. |
+| `` : `` | 쉘 명령어 실행 | 실행할 쉘 명령어를 입력할 수 있는 프롬프트를 표시합니다. |
+| `` <c-p> `` | 사용자 지정 패치 옵션 보기 |  |
+| `` m `` | 병합/리베이스 옵션 보기 | 현재 병합/리베이스를 중단/계속/건너뛰기 위한 옵션을 봅니다. |
+| `` R `` | 새로고침 | git 상태를 새로고침합니다(즉, 패널 내용을 업데이트하기 위해 백그라운드에서 `git status`, `git branch` 등을 실행). `git fetch`는 실행하지 않습니다. |
+| `` + `` | 다음 화면 모드 (일반/절반/전체화면) |  |
+| `` _ `` | 이전 화면 모드 |  |
 | `` <esc> `` | 취소 |  |
-| `` ? `` | 매뉴 열기 |  |
-| `` <c-s> `` | View filter-by-path options | View options for filtering the commit log, so that only commits matching the filter are shown. |
-| `` W `` | Diff 메뉴 열기 | View options relating to diffing two refs e.g. diffing against selected ref, entering ref to diff against, and reversing the diff direction. |
-| `` <c-e> `` | Diff 메뉴 열기 | View options relating to diffing two refs e.g. diffing against selected ref, entering ref to diff against, and reversing the diff direction. |
+| `` ? `` | 키 바인딩 메뉴 열기 |  |
+| `` <c-s> `` | 필터 옵션 보기 | 필터와 일치하는 커밋만 표시되도록 커밋 로그를 필터링하는 옵션을 봅니다. |
+| `` W `` | diff 옵션 보기 | 두 ref 간의 diff와 관련된 옵션을 봅니다. 예: 선택한 ref와 diff, diff할 ref 입력, diff 방향 반전. |
+| `` <c-e> `` | diff 옵션 보기 | 두 ref 간의 diff와 관련된 옵션을 봅니다. 예: 선택한 ref와 diff, diff할 ref 입력, diff 방향 반전. |
 | `` q `` | 종료 |  |
-| `` <c-z> `` | Suspend the application |  |
-| `` <c-w> `` | 공백문자를 Diff 뷰에서 표시 여부 전환 | Toggle whether or not whitespace changes are shown in the diff view.<br><br>The default can be changed in the config file with the key 'git.ignoreWhitespaceInDiffView'. |
-| `` z `` | 되돌리기 (reflog) (실험적) | The reflog will be used to determine what git command to run to undo the last git command. This does not include changes to the working tree; only commits are taken into consideration. |
-| `` Z `` | 다시 실행 (reflog) (실험적) | The reflog will be used to determine what git command to run to redo the last git command. This does not include changes to the working tree; only commits are taken into consideration. |
+| `` <c-z> `` | 애플리케이션 일시 중단 |  |
+| `` <c-w> `` | 공백 문자 토글 | diff 뷰에 공백 변경 사항을 표시할지 여부를 토글합니다.<br><br>기본값은 구성 파일에서 'git.ignoreWhitespaceInDiffView' 키로 변경할 수 있습니다. |
+| `` z `` | 실행 취소 | reflog를 사용하여 마지막 git 명령을 취소하기 위해 실행할 git 명령을 결정합니다. 이는 작업 트리의 변경 사항을 포함하지 않으며 커밋만 고려됩니다. |
+| `` Z `` | 다시 실행 | reflog를 사용하여 마지막 git 명령을 다시 실행하기 위해 실행할 git 명령을 결정합니다. 이는 작업 트리의 변경 사항을 포함하지 않으며 커밋만 고려됩니다. |
 
-## List panel navigation
+## 리스트 패널 탐색
 
 | Key | Action | Info |
 |-----|--------|-------------|
 | `` , `` | 이전 페이지 |  |
 | `` . `` | 다음 페이지 |  |
-| `` < (<home>) `` | 맨 위로 스크롤  |  |
-| `` > (<end>) `` | 맨 아래로 스크롤  |  |
-| `` v `` | 드래그 선택 전환 |  |
-| `` <s-down> `` | Range select down |  |
-| `` <s-up> `` | Range select up |  |
-| `` / `` | 검색 시작 |  |
-| `` H `` | 우 스크롤 |  |
-| `` L `` | 좌 스크롤 |  |
-| `` ] `` | 이전 탭 |  |
-| `` [ `` | 다음 탭 |  |
-
-## Input prompt
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <enter> `` | 확인 |  |
-| `` <esc> `` | 닫기/취소 |  |
-
-## Reflog
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 커밋 해시를 클립보드에 복사 |  |
-| `` <space> `` | 체크아웃 | Checkout the selected commit as a detached HEAD. |
-| `` y `` | 커밋 attribute 복사 | Copy commit attribute to clipboard (e.g. hash, URL, diff, message, author). |
-| `` o `` | 브라우저에서 커밋 열기 |  |
-| `` n `` | 커밋에서 새 브랜치를 만듭니다. |  |
-| `` N `` | Move commits to new branch | Create a new branch and move the unpushed commits of the current branch to it. Useful if you meant to start new work and forgot to create a new branch first.<br><br>Note that this disregards the selection, the new branch is always created either from the main branch or stacked on top of the current branch (you get to choose which). |
-| `` g `` | View reset options | View reset options (soft/mixed/hard) for resetting onto selected item. |
-| `` C `` | 커밋을 복사 (cherry-pick) | Mark commit as copied. Then, within the local commits view, you can press `V` to paste (cherry-pick) the copied commit(s) into your checked out branch. At any time you can press `<esc>` to cancel the selection. |
-| `` <c-r> `` | Reset cherry-picked (copied) commits selection |  |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` * `` | Select commits of current branch |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | 커밋 보기 |  |
-| `` w `` | View worktree options |  |
-| `` / `` | Filter the current view by text |  |
-
-## Secondary
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <tab> `` | 패널 전환 | Switch to other view (staged/unstaged changes). |
-| `` <esc> `` | Exit back to side panel |  |
-| `` / `` | 검색 시작 |  |
-
-## Stash
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <space> `` | 적용 | Apply the stash entry to your working directory. |
-| `` g `` | Pop | Apply the stash entry to your working directory and remove the stash entry. |
-| `` d `` | Drop | Remove the stash entry from the stash list. |
-| `` n `` | 새 브랜치 생성 | Create a new branch from the selected stash entry. This works by git checking out the commit that the stash entry was created from, creating a new branch from that commit, then applying the stash entry to the new branch as an additional commit. |
-| `` r `` | Rename stash |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | View selected item's files |  |
-| `` w `` | View worktree options |  |
-| `` / `` | Filter the current view by text |  |
-
-## Sub-commits
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 커밋 해시를 클립보드에 복사 |  |
-| `` <space> `` | 체크아웃 | Checkout the selected commit as a detached HEAD. |
-| `` y `` | 커밋 attribute 복사 | Copy commit attribute to clipboard (e.g. hash, URL, diff, message, author). |
-| `` o `` | 브라우저에서 커밋 열기 |  |
-| `` n `` | 커밋에서 새 브랜치를 만듭니다. |  |
-| `` N `` | Move commits to new branch | Create a new branch and move the unpushed commits of the current branch to it. Useful if you meant to start new work and forgot to create a new branch first.<br><br>Note that this disregards the selection, the new branch is always created either from the main branch or stacked on top of the current branch (you get to choose which). |
-| `` g `` | View reset options | View reset options (soft/mixed/hard) for resetting onto selected item. |
-| `` C `` | 커밋을 복사 (cherry-pick) | Mark commit as copied. Then, within the local commits view, you can press `V` to paste (cherry-pick) the copied commit(s) into your checked out branch. At any time you can press `<esc>` to cancel the selection. |
-| `` <c-r> `` | Reset cherry-picked (copied) commits selection |  |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` * `` | Select commits of current branch |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | View selected item's files |  |
-| `` w `` | View worktree options |  |
-| `` / `` | 검색 시작 |  |
-
-## Worktrees
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` n `` | New worktree |  |
-| `` <space> `` | Switch | Switch to the selected worktree. |
-| `` o `` | Open in editor |  |
-| `` d `` | Remove | Remove the selected worktree. This will both delete the worktree's directory, as well as metadata about the worktree in the .git directory. |
-| `` / `` | Filter the current view by text |  |
-
-## 메뉴
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <enter> `` | 실행 |  |
-| `` <esc> `` | 닫기/취소 |  |
-| `` / `` | Filter the current view by text |  |
-
-## 메인 패널 (Merging)
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <space> `` | Pick hunk |  |
-| `` b `` | Pick all hunks |  |
-| `` <up> `` | 이전 hunk를 선택 |  |
-| `` <down> `` | 다음 hunk를 선택 |  |
-| `` <left> `` | 이전 충돌을 선택 |  |
-| `` <right> `` | 다음 충돌을 선택 |  |
-| `` z `` | 되돌리기 | Undo last merge conflict resolution. |
-| `` e `` | 파일 편집 | Open file in external editor. |
-| `` o `` | 파일 닫기 | Open file in default application. |
-| `` M `` | Git mergetool를 열기 | Run `git mergetool`. |
-| `` <esc> `` | 파일 목록으로 돌아가기 |  |
-
-## 메인 패널 (Normal)
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` mouse wheel down (fn+up) `` | 아래로 스크롤 |  |
-| `` mouse wheel up (fn+down) `` | 위로 스크롤 |  |
-| `` <tab> `` | 패널 전환 | Switch to other view (staged/unstaged changes). |
-| `` <esc> `` | Exit back to side panel |  |
-| `` / `` | 검색 시작 |  |
-
-## 메인 패널 (Patch Building)
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <left> `` | 이전 hunk를 선택 |  |
-| `` <right> `` | 다음 hunk를 선택 |  |
-| `` v `` | 드래그 선택 전환 |  |
-| `` a `` | Toggle hunk selection | Toggle line-by-line vs. hunk selection mode. |
-| `` <c-o> `` | 선택한 텍스트를 클립보드에 복사 |  |
-| `` o `` | 파일 닫기 | Open file in default application. |
-| `` e `` | 파일 편집 | Open file in external editor. |
-| `` <space> `` | Line(s)을 패치에 추가/삭제 |  |
-| `` <esc> `` | Exit custom patch builder |  |
-| `` / `` | 검색 시작 |  |
-
-## 메인 패널 (Staging)
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <left> `` | 이전 hunk를 선택 |  |
-| `` <right> `` | 다음 hunk를 선택 |  |
-| `` v `` | 드래그 선택 전환 |  |
-| `` a `` | Toggle hunk selection | Toggle line-by-line vs. hunk selection mode. |
-| `` <c-o> `` | 선택한 텍스트를 클립보드에 복사 |  |
-| `` <space> `` | Staged 전환 | 선택한 행을 staged / unstaged |
-| `` d `` | 변경을 삭제 (git reset) | When unstaged change is selected, discard the change using `git reset`. When staged change is selected, unstage the change. |
-| `` o `` | 파일 닫기 | Open file in default application. |
-| `` e `` | 파일 편집 | Open file in external editor. |
-| `` <esc> `` | 파일 목록으로 돌아가기 |  |
-| `` <tab> `` | 패널 전환 | Switch to other view (staged/unstaged changes). |
-| `` E `` | Edit hunk | Edit selected hunk in external editor. |
-| `` c `` | 커밋 변경내용 | Commit staged changes. |
-| `` w `` | Commit changes without pre-commit hook |  |
-| `` C `` | Git 편집기를 사용하여 변경 내용을 커밋합니다. |  |
-| `` <c-f> `` | Find base commit for fixup | Find the commit that your current changes are building upon, for the sake of amending/fixing up the commit. This spares you from having to look through your branch's commits one-by-one to see which commit should be amended/fixed up. See docs: <https://github.com/jesseduffield/lazygit/tree/master/docs/Fixup_Commits.md> |
-| `` / `` | 검색 시작 |  |
-
-## 브랜치
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 브랜치명을 클립보드에 복사 |  |
-| `` i `` | Git-flow 옵션 보기 |  |
-| `` <space> `` | 체크아웃 | Checkout selected item. |
-| `` n `` | 새 브랜치 생성 |  |
-| `` N `` | Move commits to new branch | Create a new branch and move the unpushed commits of the current branch to it. Useful if you meant to start new work and forgot to create a new branch first.<br><br>Note that this disregards the selection, the new branch is always created either from the main branch or stacked on top of the current branch (you get to choose which). |
-| `` o `` | 풀 리퀘스트 생성 |  |
-| `` O `` | 풀 리퀘스트 생성 옵션 |  |
-| `` <c-y> `` | 풀 리퀘스트 URL을 클립보드에 복사 |  |
-| `` c `` | 이름으로 체크아웃 | Checkout by name. In the input box you can enter '-' to switch to the previous branch. |
-| `` - `` | Checkout previous branch |  |
-| `` F `` | 강제 체크아웃 | Force checkout selected branch. This will discard all local changes in your working directory before checking out the selected branch. |
-| `` d `` | 삭제 | View delete options for local/remote branch. |
-| `` r `` | 체크아웃된 브랜치를 이 브랜치에 리베이스 | Rebase the checked-out branch onto the selected branch. |
-| `` M `` | 현재 브랜치에 병합 | View options for merging the selected item into the current branch (regular merge, squash merge) |
-| `` f `` | Fast-forward this branch from its upstream | Fast-forward selected branch from its upstream. |
-| `` T `` | 태그를 생성 |  |
-| `` s `` | Sort order |  |
-| `` g `` | View reset options |  |
-| `` R `` | 브랜치 이름 변경 |  |
-| `` u `` | View upstream options | View options relating to the branch's upstream e.g. setting/unsetting the upstream and resetting to the upstream. |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | 커밋 보기 |  |
-| `` w `` | View worktree options |  |
-| `` / `` | Filter the current view by text |  |
-
-## 상태
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` o `` | 설정 파일 열기 | Open file in default application. |
-| `` e `` | 설정 파일 수정 | Open file in external editor. |
-| `` u `` | 업데이트 확인 |  |
-| `` <enter> `` | 최근에 사용한 저장소로 전환 |  |
-| `` a `` | Show/cycle all branch logs |  |
-| `` 0 `` | Focus main view |  |
-
-## 서브모듈
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 서브모듈 이름을 클립보드에 복사 |  |
-| `` <enter> `` | Enter | 서브모듈 열기 |
-| `` d `` | Remove | Remove the selected submodule and its corresponding directory. |
-| `` u `` | Update | 서브모듈 업데이트 |
-| `` n `` | 새로운 서브모듈 추가 |  |
-| `` e `` | 서브모듈의 URL을 수정 |  |
-| `` i `` | Initialize | 서브모듈 초기화 |
-| `` b `` | View bulk submodule options |  |
-| `` / `` | Filter the current view by text |  |
-
-## 원격
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <enter> `` | View branches |  |
-| `` n `` | 새로운 Remote 추가 |  |
-| `` d `` | Remove | Remove the selected remote. Any local branches tracking a remote branch from the remote will be unaffected. |
-| `` e `` | Edit | Remote를 수정 |
-| `` f `` | Fetch | 원격을 업데이트 |
-| `` / `` | Filter the current view by text |  |
-
-## 원격 브랜치
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 브랜치명을 클립보드에 복사 |  |
-| `` <space> `` | 체크아웃 | Checkout a new local branch based on the selected remote branch, or the remote branch as a detached head. |
-| `` n `` | 새 브랜치 생성 |  |
-| `` M `` | 현재 브랜치에 병합 | View options for merging the selected item into the current branch (regular merge, squash merge) |
-| `` r `` | 체크아웃된 브랜치를 이 브랜치에 리베이스 | Rebase the checked-out branch onto the selected branch. |
-| `` d `` | 삭제 | Delete the remote branch from the remote. |
-| `` u `` | Set as upstream | Set the selected remote branch as the upstream of the checked-out branch. |
-| `` s `` | Sort order |  |
-| `` g `` | View reset options | View reset options (soft/mixed/hard) for resetting onto selected item. |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | 커밋 보기 |  |
-| `` w `` | View worktree options |  |
-| `` / `` | Filter the current view by text |  |
-
-## 커밋
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 커밋 해시를 클립보드에 복사 |  |
-| `` <c-r> `` | Reset cherry-picked (copied) commits selection |  |
-| `` b `` | Bisect 옵션 보기 |  |
-| `` s `` | 스쿼시 | Squash the selected commit into the commit below it. The selected commit's message will be appended to the commit below it. |
-| `` f `` | Fixup | Meld the selected commit into the commit below it. Similar to squash, but the selected commit's message will be discarded. |
-| `` r `` | 커밋메시지 변경 | Reword the selected commit's message. |
-| `` R `` | 에디터에서 커밋메시지 수정 |  |
-| `` d `` | 커밋 삭제 | Drop the selected commit. This will remove the commit from the branch via a rebase. If the commit makes changes that later commits depend on, you may need to resolve merge conflicts. |
-| `` e `` | Edit (start interactive rebase) | 커밋을 편집 |
-| `` i `` | Start interactive rebase | Start an interactive rebase for the commits on your branch. This will include all commits from the HEAD commit down to the first merge commit or main branch commit.<br>If you would instead like to start an interactive rebase from the selected commit, press `e`. |
-| `` p `` | Pick | Pick commit (when mid-rebase) |
-| `` F `` | Create fixup commit | Create fixup commit for this commit |
-| `` S `` | Apply fixup commits | Squash all 'fixup!' commits above selected commit (autosquash) |
-| `` <c-j> `` | 커밋을 1개 아래로 이동 |  |
-| `` <c-k> `` | 커밋을 1개 위로 이동 |  |
-| `` V `` | 커밋을 붙여넣기 (cherry-pick) |  |
-| `` B `` | Mark as base commit for rebase | Select a base commit for the next rebase. When you rebase onto a branch, only commits above the base commit will be brought across. This uses the `git rebase --onto` command. |
-| `` A `` | Amend | Amend commit with staged changes |
-| `` a `` | Amend commit attribute | Set/Reset commit author or set co-author. |
-| `` t `` | Revert | Create a revert commit for the selected commit, which applies the selected commit's changes in reverse. |
-| `` T `` | Tag commit | Create a new tag pointing at the selected commit. You'll be prompted to enter a tag name and optional description. |
-| `` <c-l> `` | 로그 메뉴 열기 | View options for commit log e.g. changing sort order, hiding the git graph, showing the whole git graph. |
-| `` <space> `` | 체크아웃 | Checkout the selected commit as a detached HEAD. |
-| `` y `` | 커밋 attribute 복사 | Copy commit attribute to clipboard (e.g. hash, URL, diff, message, author). |
-| `` o `` | 브라우저에서 커밋 열기 |  |
-| `` n `` | 커밋에서 새 브랜치를 만듭니다. |  |
-| `` N `` | Move commits to new branch | Create a new branch and move the unpushed commits of the current branch to it. Useful if you meant to start new work and forgot to create a new branch first.<br><br>Note that this disregards the selection, the new branch is always created either from the main branch or stacked on top of the current branch (you get to choose which). |
-| `` g `` | View reset options | View reset options (soft/mixed/hard) for resetting onto selected item. |
-| `` C `` | 커밋을 복사 (cherry-pick) | Mark commit as copied. Then, within the local commits view, you can press `V` to paste (cherry-pick) the copied commit(s) into your checked out branch. At any time you can press `<esc>` to cancel the selection. |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` * `` | Select commits of current branch |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | View selected item's files |  |
-| `` w `` | View worktree options |  |
-| `` / `` | 검색 시작 |  |
+| `` < (<home>) `` | 맨 위로 스크롤 |  |
+| `` > (<end>) `` | 맨 아래로 스크롤 |  |
+| `` v `` | 범위 선택 토글 |  |
+| `` <s-down> `` | 아래로 범위 선택 |  |
+| `` <s-up> `` | 위로 범위 선택 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+| `` H `` | 왼쪽으로 스크롤 |  |
+| `` L `` | 오른쪽으로 스크롤 |  |
+| `` ] `` | 다음 탭 |  |
+| `` [ `` | 이전 탭 |  |
 
 ## 커밋 파일
 
 | Key | Action | Info |
 |-----|--------|-------------|
-| `` <c-o> `` | 파일명을 클립보드에 복사 |  |
+| `` <c-o> `` | 경로를 클립보드에 복사 |  |
 | `` y `` | 클립보드에 복사 |  |
-| `` c `` | 체크아웃 | Checkout file |
-| `` d `` | Remove | Discard this commit's changes to this file |
-| `` o `` | 파일 닫기 | Open file in default application. |
-| `` e `` | Edit | Open file in external editor. |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` <space> `` | Toggle file included in patch | Toggle whether the file is included in the custom patch. See https://github.com/jesseduffield/lazygit#rebase-magic-custom-patches. |
-| `` a `` | Toggle all files included in patch | Add/remove all commit's files to custom patch. See https://github.com/jesseduffield/lazygit#rebase-magic-custom-patches. |
-| `` <enter> `` | Enter file to add selected lines to the patch (or toggle directory collapsed) | If a file is selected, enter the file so that you can add/remove individual lines to the custom patch. If a directory is selected, toggle the directory. |
-| `` ` `` | 파일 트리뷰로 전환 | Toggle file view between flat and tree layout. Flat layout shows all file paths in a single list, tree layout groups files by directory.<br><br>The default can be changed in the config file with the key 'gui.showFileTree'. |
-| `` - `` | Collapse all files | Collapse all directories in the files tree |
-| `` = `` | Expand all files | Expand all directories in the file tree |
-| `` 0 `` | Focus main view |  |
-| `` / `` | 검색 시작 |  |
+| `` c `` | 체크아웃 | 파일을 체크아웃합니다. 작업 트리의 파일을 선택한 커밋의 버전으로 바꿉니다. |
+| `` d `` | 제거 | 이 파일에 대한 이 커밋의 변경 사항을 버립니다. 백그라운드에서 대화형 리베이스를 실행하므로 이후 커밋도 이 파일을 변경하면 병합 충돌이 발생할 수 있습니다. |
+| `` o `` | 파일 열기 | 기본 애플리케이션에서 파일을 엽니다. |
+| `` e `` | 편집 | 외부 편집기에서 파일을 엽니다. |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` <space> `` | 패치에 파일 포함 토글 | 사용자 지정 패치에 파일이 포함되는지 여부를 토글합니다. https://github.com/jesseduffield/lazygit#rebase-magic-custom-patches 를 참조하세요. |
+| `` a `` | 모든 파일 토글 | 사용자 지정 패치에 모든 커밋 파일을 추가/제거합니다. https://github.com/jesseduffield/lazygit#rebase-magic-custom-patches 를 참조하세요. |
+| `` <enter> `` | 파일 들어가기 / 디렉토리 접기/펴기 토글 | 파일이 선택된 경우 파일로 들어가 사용자 지정 패치에 개별 라인을 추가/제거할 수 있습니다. 디렉토리가 선택된 경우 디렉토리를 토글합니다. |
+| `` ` `` | 파일 트리 뷰 토글 | 파일 뷰를 플랫 레이아웃과 트리 레이아웃 간에 토글합니다. 플랫 레이아웃은 모든 파일 경로를 단일 목록에 표시하고 트리 레이아웃은 파일을 디렉토리별로 그룹화합니다.<br><br>기본값은 구성 파일에서 'gui.showFileTree' 키로 변경할 수 있습니다. |
+| `` - `` | 모든 파일 접기 | 파일 트리의 모든 디렉토리를 접습니다. |
+| `` = `` | 모든 파일 펼치기 | 파일 트리의 모든 디렉토리를 펼칩니다. |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
 
-## 커밋메시지
+## 커밋 요약
 
 | Key | Action | Info |
 |-----|--------|-------------|
 | `` <enter> `` | 확인 |  |
 | `` <esc> `` | 닫기 |  |
 
-## 태그
+## 커밋
 
 | Key | Action | Info |
 |-----|--------|-------------|
-| `` <c-o> `` | Copy tag to clipboard |  |
-| `` <space> `` | 체크아웃 | Checkout the selected tag as a detached HEAD. |
-| `` n `` | 태그를 생성 | Create new tag from current commit. You'll be prompted to enter a tag name and optional description. |
-| `` d `` | 삭제 | View delete options for local/remote tag. |
-| `` P `` | 태그를 push | Push the selected tag to a remote. You'll be prompted to select a remote. |
-| `` g `` | 초기화 | View reset options (soft/mixed/hard) for resetting onto selected item. |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` 0 `` | Focus main view |  |
-| `` <enter> `` | 커밋 보기 |  |
-| `` w `` | View worktree options |  |
-| `` / `` | Filter the current view by text |  |
-
-## 파일
-
-| Key | Action | Info |
-|-----|--------|-------------|
-| `` <c-o> `` | 파일명을 클립보드에 복사 |  |
-| `` <space> `` | Staged 전환 | Toggle staged for selected file. |
-| `` <c-b> `` | 파일을 필터하기 (Staged/unstaged) |  |
-| `` y `` | 클립보드에 복사 |  |
-| `` c `` | 커밋 변경내용 | Commit staged changes. |
-| `` w `` | Commit changes without pre-commit hook |  |
-| `` A `` | 마지맛 커밋 수정 |  |
-| `` C `` | Git 편집기를 사용하여 변경 내용을 커밋합니다. |  |
-| `` <c-f> `` | Find base commit for fixup | Find the commit that your current changes are building upon, for the sake of amending/fixing up the commit. This spares you from having to look through your branch's commits one-by-one to see which commit should be amended/fixed up. See docs: <https://github.com/jesseduffield/lazygit/tree/master/docs/Fixup_Commits.md> |
-| `` e `` | Edit | Open file in external editor. |
-| `` o `` | 파일 닫기 | Open file in default application. |
-| `` i `` | Ignore file |  |
-| `` r `` | 파일 새로고침 |  |
-| `` s `` | Stash | Stash all changes. For other variations of stashing, use the view stash options keybinding. |
-| `` S `` | Stash 옵션 보기 | View stash options (e.g. stash all, stash staged, stash unstaged). |
-| `` a `` | 모든 변경을 Staged/unstaged으로 전환 | Toggle staged/unstaged for all files in working tree. |
-| `` <enter> `` | Stage individual hunks/lines for file, or collapse/expand for directory | If the selected item is a file, focus the staging view so you can stage individual hunks/lines. If the selected item is a directory, collapse/expand it. |
-| `` d `` | View 'discard changes' options | View options for discarding changes to the selected file. |
-| `` g `` | View upstream reset options |  |
-| `` D `` | 초기화 | View reset options for working tree (e.g. nuking the working tree). |
-| `` ` `` | 파일 트리뷰로 전환 | Toggle file view between flat and tree layout. Flat layout shows all file paths in a single list, tree layout groups files by directory.<br><br>The default can be changed in the config file with the key 'gui.showFileTree'. |
-| `` <c-t> `` | Open external diff tool (git difftool) |  |
-| `` M `` | Git mergetool를 열기 | Run `git mergetool`. |
-| `` f `` | Fetch | Fetch changes from remote. |
-| `` - `` | Collapse all files | Collapse all directories in the files tree |
-| `` = `` | Expand all files | Expand all directories in the file tree |
-| `` 0 `` | Focus main view |  |
-| `` / `` | 검색 시작 |  |
+| `` <c-o> `` | 커밋 해시를 클립보드에 복사 |  |
+| `` <c-r> `` | 복사된 (체리-픽된) 커밋 선택 재설정 |  |
+| `` b `` | bisect 옵션 보기 |  |
+| `` s `` | 스쿼시 | 선택한 커밋을 아래 커밋에 스쿼시합니다. 선택한 커밋의 메시지가 아래 커밋에 추가됩니다. |
+| `` f `` | Fixup | 선택한 커밋을 아래 커밋에 합칩니다. 스쿼시와 유사하지만 선택한 커밋의 메시지는 버려집니다. |
+| `` r `` | 다시쓰기 | 선택한 커밋의 메시지를 다시 작성합니다. |
+| `` R `` | 편집기로 다시쓰기 |  |
+| `` d `` | 드롭 | 선택한 커밋을 드롭합니다. 리베이스를 통해 브랜치에서 커밋이 제거됩니다. 커밋이 이후 커밋이 의존하는 변경 사항을 만드는 경우 병합 충돌을 해결해야 할 수 있습니다. |
+| `` e `` | 편집 (대화형 리베이스 시작) | 선택한 커밋을 편집합니다. 이를 사용하여 선택한 커밋에서 대화형 리베이스를 시작합니다. 이미 리베이스 중일 때, 이것은 선택한 커밋을 편집용으로 표시하며, 리베이스를 계속하면 선택한 커밋에서 리베이스가 일시 중지되어 변경할 수 있습니다. |
+| `` i `` | 대화형 리베이스 시작 | 브랜치의 커밋에 대한 대화형 리베이스를 시작합니다. 여기에는 HEAD 커밋부터 첫 번째 병합 커밋 또는 메인 브랜치 커밋까지의 모든 커밋이 포함됩니다.<br>대신 선택한 커밋에서 대화형 리베이스를 시작하려면 `e`를 누릅니다. |
+| `` p `` | 픽 | 선택한 커밋을 픽하도록 표시합니다 (리베이스 중일 때). 이는 리베이스를 계속할 때 커밋이 유지됨을 의미합니다. |
+| `` F `` | fixup 커밋 생성 | 선택한 커밋에 대한 'fixup!' 커밋을 생성합니다. 나중에 이 동일한 커밋에서 `S`를 눌러 위의 모든 fixup 커밋을 적용할 수 있습니다. |
+| `` S `` | fixup 커밋 적용 | 선택한 커밋 위에 있거나 현재 브랜치에 있는 모든 'fixup!' 커밋을 스쿼시합니다 (autosquash). |
+| `` <c-j> `` | 커밋을 아래로 한 칸 이동 |  |
+| `` <c-k> `` | 커밋을 위로 한 칸 이동 |  |
+| `` V `` | 붙여넣기 (체리-픽) |  |
+| `` B `` | 리베이스의 베이스 커밋으로 표시 | 다음 리베이스의 베이스 커밋을 선택합니다. 브랜치에 리베이스할 때 베이스 커밋 위의 커밋만 가져옵니다. 이것은 `git rebase --onto` 명령을 사용합니다. |
+| `` A `` | 수정 | 스테이징된 변경 사항으로 커밋을 수정합니다. 선택한 커밋이 HEAD 커밋인 경우 `git commit --amend`를 수행합니다. 그렇지 않으면 리베이스를 통해 커밋이 수정됩니다. |
+| `` a `` | 커밋 속성 수정 | 커밋 작성자를 설정/재설정하거나 공동 작성자를 설정합니다. |
+| `` t `` | 되돌리기 | 선택한 커밋에 대한 되돌리기 커밋을 생성하여 선택한 커밋의 변경 사항을 역으로 적용합니다. |
+| `` T `` | 커밋 태그 | 선택한 커밋을 가리키는 새 태그를 만듭니다. 태그 이름과 선택적 설명을 입력하라는 메시지가 표시됩니다. |
+| `` <c-l> `` | 로그 옵션 보기 | 커밋 로그에 대한 옵션(예: 정렬 순서 변경, git 그래프 숨기기, 전체 git 그래프 표시)을 봅니다. |
+| `` <space> `` | 체크아웃 | 선택한 커밋을 분리된 HEAD로 체크아웃합니다. |
+| `` y `` | 커밋 속성을 클립보드에 복사 | 커밋 속성(예: 해시, URL, diff, 메시지, 작성자)을 클립보드에 복사합니다. |
+| `` o `` | 브라우저에서 커밋 열기 |  |
+| `` n `` | 커밋에서 새 브랜치 생성 |  |
+| `` N `` | 커밋을 새 브랜치로 이동 | 새 브랜치를 만들고 현재 브랜치의 푸시되지 않은 커밋을 이동합니다. 새 작업을 시작하려고 했는데 새 브랜치를 만드는 것을 잊었을 때 유용합니다.<br><br>선택 사항은 무시되며, 새 브랜치는 항상 메인 브랜치에서 생성되거나 현재 브랜치 위에 쌓입니다(선택 가능). |
+| `` g `` | 리셋 | 선택한 항목으로 리셋하기 위한 리셋 옵션(soft/mixed/hard)을 봅니다. |
+| `` C `` | 복사 (체리-픽) | 커밋을 복사된 것으로 표시합니다. 그런 다음 로컬 커밋 뷰 내에서 `V`를 눌러 복사된 커밋을 체크아웃된 브랜치에 붙여넣기(체리-픽)할 수 있습니다. 언제든지 `<esc>`를 눌러 선택을 취소할 수 있습니다. |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` * `` | 현재 브랜치의 커밋 선택 |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 파일 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
 
 ## 확인 패널
 
@@ -410,3 +126,287 @@ _Legend: `<c-b>` means ctrl+b, `<a-b>` means alt+b, `B` means shift+b_
 | `` <enter> `` | 확인 |  |
 | `` <esc> `` | 닫기/취소 |  |
 | `` <c-o> `` | 클립보드에 복사 |  |
+
+## 파일
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 경로를 클립보드에 복사 |  |
+| `` <space> `` | 스테이지 | 선택한 파일의 스테이징을 토글합니다. |
+| `` <c-b> `` | 상태별로 파일 필터링 |  |
+| `` y `` | 클립보드에 복사 |  |
+| `` c `` | 커밋 | 스테이징된 변경 사항을 커밋합니다. |
+| `` w `` | 사전 커밋 훅 없이 변경 사항 커밋 |  |
+| `` A `` | 마지막 커밋 수정 |  |
+| `` C `` | git 편집기를 사용하여 변경 사항 커밋 |  |
+| `` <c-f> `` | fixup을 위한 베이스 커밋 찾기 | 커밋을 수정/fixup하기 위해 현재 변경 사항이 기반으로 하는 커밋을 찾습니다. 이렇게 하면 수정/fixup해야 할 커밋을 찾기 위해 브랜치의 커밋을 하나씩 살펴볼 필요가 없습니다. 문서 참조: <https://github.com/jesseduffield/lazygit/tree/master/docs/Fixup_Commits.md> |
+| `` e `` | 편집 | 외부 편집기에서 파일을 엽니다. |
+| `` o `` | 파일 열기 | 기본 애플리케이션에서 파일을 엽니다. |
+| `` i `` | 파일 무시 또는 제외 |  |
+| `` r `` | 파일 새로고침 |  |
+| `` s `` | 스태시 | 모든 변경 사항을 스태시합니다. 다른 스태시 변형을 보려면 스태시 옵션 보기 키 바인딩을 사용하세요. |
+| `` S `` | 스태시 옵션 보기 | 스태시 옵션(예: 모든 변경 사항 스태시, 스테이징된 변경 사항 스태시, 스테이징되지 않은 변경 사항 스태시)을 봅니다. |
+| `` a `` | 모두 스테이지 | 작업 트리의 모든 파일에 대해 스테이징/언스테이징을 토글합니다. |
+| `` <enter> `` | 라인 스테이지 / 디렉토리 접기 | 선택한 항목이 파일인 경우 스테이징 뷰에 포커스를 맞춰 개별 덩어리/라인을 스테이징할 수 있습니다. 선택한 항목이 디렉토리인 경우 접거나 펼칩니다. |
+| `` d `` | 버리기 | 선택한 파일의 변경 사항을 버리는 옵션을 봅니다. |
+| `` g `` | 업스트림 리셋 옵션 보기 |  |
+| `` D `` | 리셋 | 작업 트리에 대한 리셋 옵션(예: 작업 트리 날리기)을 봅니다. |
+| `` ` `` | 파일 트리 뷰 토글 | 파일 뷰를 플랫 레이아웃과 트리 레이아웃 간에 토글합니다. 플랫 레이아웃은 모든 파일 경로를 단일 목록에 표시하고 트리 레이아웃은 파일을 디렉토리별로 그룹화합니다.<br><br>기본값은 구성 파일에서 'gui.showFileTree' 키로 변경할 수 있습니다. |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` M `` | 외부 병합 도구 열기 | `git mergetool`을 실행합니다. |
+| `` f `` | 페치 | 원격에서 변경 사항을 페치합니다. |
+| `` - `` | 모든 파일 접기 | 파일 트리의 모든 디렉토리를 접습니다. |
+| `` = `` | 모든 파일 펼치기 | 파일 트리의 모든 디렉토리를 펼칩니다. |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+
+## 입력 프롬프트
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <enter> `` | 확인 |  |
+| `` <esc> `` | 닫기/취소 |  |
+
+## 로컬 브랜치
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 브랜치 이름을 클립보드에 복사 |  |
+| `` i `` | git-flow 옵션 보기 |  |
+| `` <space> `` | 체크아웃 | 선택한 항목을 체크아웃합니다. |
+| `` n `` | 새 브랜치 |  |
+| `` N `` | 커밋을 새 브랜치로 이동 | 새 브랜치를 만들고 현재 브랜치의 푸시되지 않은 커밋을 이동합니다. 새 작업을 시작하려고 했는데 새 브랜치를 만드는 것을 잊었을 때 유용합니다.<br><br>선택 사항은 무시되며, 새 브랜치는 항상 메인 브랜치에서 생성되거나 현재 브랜치 위에 쌓입니다(선택 가능). |
+| `` o `` | 풀 리퀘스트 생성 |  |
+| `` O `` | 풀 리퀘스트 생성 옵션 보기 |  |
+| `` <c-y> `` | 풀 리퀘스트 URL을 클립보드에 복사 |  |
+| `` c `` | 이름으로 체크아웃 | 이름으로 체크아웃합니다. 입력 상자에 '-'를 입력하여 이전 브랜치로 전환할 수 있습니다. |
+| `` - `` | 이전 브랜치 체크아웃 |  |
+| `` F `` | 강제 체크아웃 | 선택한 브랜치를 강제로 체크아웃합니다. 이렇게 하면 선택한 브랜치를 체크아웃하기 전에 작업 디렉토리의 모든 로컬 변경 사항이 삭제됩니다. |
+| `` d `` | 삭제 | 로컬/원격 브랜치에 대한 삭제 옵션을 봅니다. |
+| `` r `` | 리베이스 | 체크아웃된 브랜치를 선택한 브랜치에 리베이스합니다. |
+| `` M `` | 병합 | 선택한 항목을 현재 브랜치에 병합하는 옵션(일반 병합, 스쿼시 병합)을 봅니다. |
+| `` f `` | 빨리 감기 | 선택한 브랜치를 업스트림에서 빨리 감습니다. |
+| `` T `` | 새 태그 |  |
+| `` s `` | 정렬 순서 |  |
+| `` g `` | 리셋 |  |
+| `` R `` | 브랜치 이름 바꾸기 |  |
+| `` u `` | 업스트림 옵션 보기 | 브랜치의 업스트림과 관련된 옵션(예: 업스트림 설정/해제 및 업스트림으로 리셋)을 봅니다. |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 커밋 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 메인 패널 (병합 중)
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <space> `` | 덩어리 선택 |  |
+| `` b `` | 모든 덩어리 선택 |  |
+| `` <up> `` | 이전 덩어리 |  |
+| `` <down> `` | 다음 덩어리 |  |
+| `` <left> `` | 이전 충돌 |  |
+| `` <right> `` | 다음 충돌 |  |
+| `` z `` | 실행 취소 | 마지막 병합 충돌 해결을 취소합니다. |
+| `` e `` | 파일 편집 | 외부 편집기에서 파일을 엽니다. |
+| `` o `` | 파일 열기 | 기본 애플리케이션에서 파일을 엽니다. |
+| `` M `` | 외부 병합 도구 열기 | `git mergetool`을 실행합니다. |
+| `` <esc> `` | 파일 패널로 돌아가기 |  |
+
+## 메인 패널 (일반)
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` mouse wheel down (fn+up) `` | 아래로 스크롤 |  |
+| `` mouse wheel up (fn+down) `` | 위로 스크롤 |  |
+| `` <tab> `` | 뷰 전환 | 다른 뷰(스테이징된/스테이징되지 않은 변경 사항)로 전환합니다. |
+| `` <esc> `` | 사이드 패널로 돌아가기 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+
+## 메인 패널 (패치 빌딩)
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <left> `` | 이전 덩어리로 이동 |  |
+| `` <right> `` | 다음 덩어리로 이동 |  |
+| `` v `` | 범위 선택 토글 |  |
+| `` a `` | 덩어리 선택 토글 | 라인별 대 덩어리 선택 모드를 토글합니다. |
+| `` <c-o> `` | 선택한 텍스트를 클립보드에 복사 |  |
+| `` o `` | 파일 열기 | 기본 애플리케이션에서 파일을 엽니다. |
+| `` e `` | 파일 편집 | 외부 편집기에서 파일을 엽니다. |
+| `` <space> `` | 패치에 라인 토글 |  |
+| `` <esc> `` | 사용자 지정 패치 빌더 종료 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+
+## 메인 패널 (스테이징)
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <left> `` | 이전 덩어리로 이동 |  |
+| `` <right> `` | 다음 덩어리로 이동 |  |
+| `` v `` | 범위 선택 토글 |  |
+| `` a `` | 덩어리 선택 토글 | 라인별 대 덩어리 선택 모드를 토글합니다. |
+| `` <c-o> `` | 선택한 텍스트를 클립보드에 복사 |  |
+| `` <space> `` | 스테이지 | 선택 항목을 스테이징/언스테이징 토글합니다. |
+| `` d `` | 버리기 | 스테이징되지 않은 변경 사항이 선택된 경우 `git reset`을 사용하여 변경 사항을 버립니다. 스테이징된 변경 사항이 선택된 경우 변경 사항을 언스테이지합니다. |
+| `` o `` | 파일 열기 | 기본 애플리케이션에서 파일을 엽니다. |
+| `` e `` | 파일 편집 | 외부 편집기에서 파일을 엽니다. |
+| `` <esc> `` | 파일 패널로 돌아가기 |  |
+| `` <tab> `` | 뷰 전환 | 다른 뷰(스테이징된/스테이징되지 않은 변경 사항)로 전환합니다. |
+| `` E `` | 덩어리 편집 | 외부 편집기에서 선택한 덩어리를 편집합니다. |
+| `` c `` | 커밋 | 스테이징된 변경 사항을 커밋합니다. |
+| `` w `` | 사전 커밋 훅 없이 변경 사항 커밋 |  |
+| `` C `` | git 편집기를 사용하여 변경 사항 커밋 |  |
+| `` <c-f> `` | fixup을 위한 베이스 커밋 찾기 | 커밋을 수정/fixup하기 위해 현재 변경 사항이 기반으로 하는 커밋을 찾습니다. 이렇게 하면 수정/fixup해야 할 커밋을 찾기 위해 브랜치의 커밋을 하나씩 살펴볼 필요가 없습니다. 문서 참조: <https://github.com/jesseduffield/lazygit/tree/master/docs/Fixup_Commits.md> |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+
+## 메뉴
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <enter> `` | 실행 |  |
+| `` <esc> `` | 닫기/취소 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## Reflog
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 커밋 해시를 클립보드에 복사 |  |
+| `` <space> `` | 체크아웃 | 선택한 커밋을 분리된 HEAD로 체크아웃합니다. |
+| `` y `` | 커밋 속성을 클립보드에 복사 | 커밋 속성(예: 해시, URL, diff, 메시지, 작성자)을 클립보드에 복사합니다. |
+| `` o `` | 브라우저에서 커밋 열기 |  |
+| `` n `` | 커밋에서 새 브랜치 생성 |  |
+| `` N `` | 커밋을 새 브랜치로 이동 | 새 브랜치를 만들고 현재 브랜치의 푸시되지 않은 커밋을 이동합니다. 새 작업을 시작하려고 했는데 새 브랜치를 만드는 것을 잊었을 때 유용합니다.<br><br>선택 사항은 무시되며, 새 브랜치는 항상 메인 브랜치에서 생성되거나 현재 브랜치 위에 쌓입니다(선택 가능). |
+| `` g `` | 리셋 | 선택한 항목으로 리셋하기 위한 리셋 옵션(soft/mixed/hard)을 봅니다. |
+| `` C `` | 복사 (체리-픽) | 커밋을 복사된 것으로 표시합니다. 그런 다음 로컬 커밋 뷰 내에서 `V`를 눌러 복사된 커밋을 체크아웃된 브랜치에 붙여넣기(체리-픽)할 수 있습니다. 언제든지 `<esc>`를 눌러 선택을 취소할 수 있습니다. |
+| `` <c-r> `` | 복사된 (체리-픽된) 커밋 선택 재설정 |  |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` * `` | 현재 브랜치의 커밋 선택 |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 커밋 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 원격 브랜치
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 브랜치 이름을 클립보드에 복사 |  |
+| `` <space> `` | 체크아웃 | 선택한 원격 브랜치를 기반으로 새 로컬 브랜치를 체크아웃하거나 원격 브랜치를 분리된 헤드로 체크아웃합니다. |
+| `` n `` | 새 브랜치 |  |
+| `` M `` | 병합 | 선택한 항목을 현재 브랜치에 병합하는 옵션(일반 병합, 스쿼시 병합)을 봅니다. |
+| `` r `` | 리베이스 | 체크아웃된 브랜치를 선택한 브랜치에 리베이스합니다. |
+| `` d `` | 삭제 | 원격에서 원격 브랜치를 삭제합니다. |
+| `` u `` | 업스트림으로 설정 | 선택한 원격 브랜치를 체크아웃된 브랜치의 업스트림으로 설정합니다. |
+| `` s `` | 정렬 순서 |  |
+| `` g `` | 리셋 | 선택한 항목으로 리셋하기 위한 리셋 옵션(soft/mixed/hard)을 봅니다. |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 커밋 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 원격
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <enter> `` | 브랜치 보기 |  |
+| `` n `` | 새 원격 |  |
+| `` d `` | 제거 | 선택한 원격을 제거합니다. 원격의 원격 브랜치를 추적하는 모든 로컬 브랜치는 영향을 받지 않습니다. |
+| `` e `` | 편집 | 선택한 원격의 이름 또는 URL을 편집합니다. |
+| `` f `` | 페치 | 원격 저장소에서 업데이트를 페치합니다. 로컬 브랜치에 병합하지 않고 새 커밋과 브랜치를 가져옵니다. |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 보조
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <tab> `` | 뷰 전환 | 다른 뷰(스테이징된/스테이징되지 않은 변경 사항)로 전환합니다. |
+| `` <esc> `` | 사이드 패널로 돌아가기 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+
+## 스태시
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <space> `` | 적용 | 스태시 항목을 작업 디렉토리에 적용합니다. |
+| `` g `` | 팝 | 스태시 항목을 작업 디렉토리에 적용하고 스태시 목록에서 제거합니다. |
+| `` d `` | 드롭 | 스태시 목록에서 스태시 항목을 제거합니다. |
+| `` n `` | 새 브랜치 | 선택한 스태시 항목에서 새 브랜치를 만듭니다. 스태시 항목이 생성된 커밋을 git 체크아웃하고 해당 커밋에서 새 브랜치를 만든 다음 스태시 항목을 추가 커밋으로 새 브랜치에 적용하는 방식으로 작동합니다. |
+| `` r `` | 스태시 이름 바꾸기 |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 파일 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 상태
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` o `` | 설정 파일 열기 | 기본 애플리케이션에서 파일을 엽니다. |
+| `` e `` | 설정 파일 편집 | 외부 편집기에서 파일을 엽니다. |
+| `` u `` | 업데이트 확인 |  |
+| `` <enter> `` | 최근 저장소로 전환 |  |
+| `` a `` | 모든 브랜치 로그 표시/순환 |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+
+## 서브커밋
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 커밋 해시를 클립보드에 복사 |  |
+| `` <space> `` | 체크아웃 | 선택한 커밋을 분리된 HEAD로 체크아웃합니다. |
+| `` y `` | 커밋 속성을 클립보드에 복사 | 커밋 속성(예: 해시, URL, diff, 메시지, 작성자)을 클립보드에 복사합니다. |
+| `` o `` | 브라우저에서 커밋 열기 |  |
+| `` n `` | 커밋에서 새 브랜치 생성 |  |
+| `` N `` | 커밋을 새 브랜치로 이동 | 새 브랜치를 만들고 현재 브랜치의 푸시되지 않은 커밋을 이동합니다. 새 작업을 시작하려고 했는데 새 브랜치를 만드는 것을 잊었을 때 유용합니다.<br><br>선택 사항은 무시되며, 새 브랜치는 항상 메인 브랜치에서 생성되거나 현재 브랜치 위에 쌓입니다(선택 가능). |
+| `` g `` | 리셋 | 선택한 항목으로 리셋하기 위한 리셋 옵션(soft/mixed/hard)을 봅니다. |
+| `` C `` | 복사 (체리-픽) | 커밋을 복사된 것으로 표시합니다. 그런 다음 로컬 커밋 뷰 내에서 `V`를 눌러 복사된 커밋을 체크아웃된 브랜치에 붙여넣기(체리-픽)할 수 있습니다. 언제든지 `<esc>`를 눌러 선택을 취소할 수 있습니다. |
+| `` <c-r> `` | 복사된 (체리-픽된) 커밋 선택 재설정 |  |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` * `` | 현재 브랜치의 커밋 선택 |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 파일 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰에서 텍스트로 검색 |  |
+
+## 서브모듈
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 서브모듈 이름을 클립보드에 복사 |  |
+| `` <enter> `` | 들어가기 | 서브모듈에 들어갑니다. 서브모듈에 들어간 후 `<esc>`를 눌러 부모 저장소로 다시 나올 수 있습니다. |
+| `` d `` | 제거 | 선택한 서브모듈과 해당 디렉토리를 제거합니다. |
+| `` u `` | 업데이트 | 선택한 서브모듈을 업데이트합니다. |
+| `` n `` | 새 서브모듈 |  |
+| `` e `` | 서브모듈 URL 업데이트 |  |
+| `` i `` | 초기화 | 페치를 준비하기 위해 선택한 서브모듈을 초기화합니다. 아마도 이어서 '업데이트' 액션을 호출하여 서브모듈을 페치하고 싶을 것입니다. |
+| `` b `` | 대량 서브모듈 옵션 보기 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 태그
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` <c-o> `` | 태그를 클립보드에 복사 |  |
+| `` <space> `` | 체크아웃 | 선택한 태그를 분리된 HEAD로 체크아웃합니다. |
+| `` n `` | 새 태그 | 현재 커밋에서 새 태그를 만듭니다. 태그 이름과 선택적 설명을 입력하라는 메시지가 표시됩니다. |
+| `` d `` | 삭제 | 로컬/원격 태그에 대한 삭제 옵션을 봅니다. |
+| `` P `` | 태그 푸시 | 선택한 태그를 원격으로 푸시합니다. 원격을 선택하라는 메시지가 표시됩니다. |
+| `` g `` | 리셋 | 선택한 항목으로 리셋하기 위한 리셋 옵션(soft/mixed/hard)을 봅니다. |
+| `` <c-t> `` | 외부 diff 도구 열기 (git difftool) |  |
+| `` 0 `` | 메인 뷰에 포커스 |  |
+| `` <enter> `` | 커밋 보기 |  |
+| `` w `` | 워크트리 옵션 보기 |  |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
+
+## 워크트리
+
+| Key | Action | Info |
+|-----|--------|-------------|
+| `` n `` | 새 워크트리 |  |
+| `` <space> `` | 전환 | 선택한 워크트리로 전환합니다. |
+| `` o `` | 편집기에서 열기 |  |
+| `` d `` | 제거 | 선택한 워크트리를 제거합니다. 워크트리의 디렉토리와 .git 디렉토리의 워크트리에 대한 메타데이터가 모두 삭제됩니다. |
+| `` / `` | 현재 뷰를 텍스트로 필터링 |  |
